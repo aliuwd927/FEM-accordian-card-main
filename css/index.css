@@ -18,55 +18,79 @@ body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   justify-content: center;
   align-items: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.root {
-  margin: 0 auto;
+.wrapper {
   height: 509px;
   width: 902px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+.root {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   background-color: white;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   border: none;
+  position: relative;
+  /*   z-index: -1; */
+  overflow: hidden;
+  padding: 20px;
 }
 
 .leftContainer,
 .rightContainer {
-  /* 	border: solid; 
-	border-color: black; */
+  /* border: solid;
+  border-color: black; */
+  height: 100%;
   width: 50%;
 }
-
+.leftContainer {
+}
 .bgImgContainer {
   background-image: url("/faq-accordion-card-main/images/bg-pattern-desktop.svg");
-  height: 150%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
   width: 95%;
   background-position: left;
   transform: scaleX(-1);
-  margin-top: -175px;
-  background-repeat: no-repeat;
+  transform: scale(2.25);
+  position: relative;
+  margin-top: -20%;
+  margin-left: -65%;
 }
 
 .bgWomanDesktop {
   background-image: url("/faq-accordion-card-main/images/illustration-woman-online-desktop.svg");
   background-repeat: no-repeat;
   height: 100%;
-  width: 110%;
+  width: 100%;
+  background-position: top right;
   position: relative;
-  top: -500px;
-  left: -95px;
+  top: -75%;
+  left: -8%;
 }
 
 .boxDesktop {
   background-image: url("/faq-accordion-card-main/images/illustration-box-desktop.svg");
+  position: absolute;
   background-repeat: no-repeat;
-  height: 25%;
-  width: 35%;
-  position: relative;
-  top: -885px;
-  left: -100px;
+  height: 100%;
+  width: 100%;
+  background-position: left;
+  top: 40px;
+  left: -70px;
+  z-index: 0;
 }
 
 .rightContainer {
@@ -74,9 +98,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 3;
 }
 
-.rightTitleContainer {
+.faqTitle {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .infoTextContainer {
@@ -112,3 +140,8 @@ body {
 }
 
 /* Css Media Query */
+
+/* @media screen and (min-width: 320px) and (max-width: 768px) {
+ 
+}
+ */

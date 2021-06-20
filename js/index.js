@@ -1,4 +1,5 @@
 //Container for HTML
+const wrapper = document.querySelector(".wrapper");
 const rootContainer = document.querySelector(".root");
 
 //Conatiner to Split left and right
@@ -23,7 +24,7 @@ boxDesktop.classList.add("boxDesktop");
 //Title Container for Right Side
 const rightTitleContainer = document.createElement("div");
 rightTitleContainer.classList.add("faqTitle");
-rightTitleContainer.innerHTML = "FAQ";
+rightTitleContainer.innerText = "FAQ";
 
 //Array of sentence
 const listSentences = [
@@ -36,10 +37,11 @@ const listSentences = [
 ];
 
 //Appends child to parents Containers
+wrapper.appendChild(boxDesktop);
 rootContainer.appendChild(leftContainer);
 leftContainer.appendChild(bgImgContainer);
 leftContainer.appendChild(womanOnlineDesktop);
-leftContainer.appendChild(boxDesktop);
+/* leftContainer.appendChild(boxDesktop); */
 rootContainer.appendChild(rightContainer);
 rightContainer.appendChild(rightTitleContainer);
 
@@ -88,3 +90,25 @@ for (let i = 0; i < listSentences.length; i++) {
     toggleOn.classList.toggle("infoInner");
   });
 }
+
+/* 
+Try Media Query JS
+*/
+
+//Play with this later
+
+/* const mediaQuery = window.matchMedia([
+  "(min-width: 768px)",
+  "(min-width: 320px)",
+]);
+
+function screenChange(e) {
+  if (e.matches) {
+    console.log(e);
+  }
+}
+
+mediaQuery.addEventListener(screenChange);
+
+screenChange(mediaQuery);
+ */
