@@ -42,15 +42,12 @@ body {
   justify-content: center;
   border: none;
   position: relative;
-  /*   z-index: -1; */
   overflow: hidden;
   padding: 20px;
 }
 
 .leftContainer,
 .rightContainer {
-  /* border: solid;
-  border-color: black; */
   height: 100%;
   width: 50%;
 }
@@ -130,18 +127,67 @@ body {
   width: 5%;
 }
 
+.infoInner {
+  display: none;
+}
+
 /* *:not(html, body):focus,
 *:not(html, body):hover {
   border: solid black;
 } */
 
-.infoInner {
-  display: none;
-}
-
 /* Css Media Query */
 
-/* @media screen and (min-width: 320px) and (max-width: 768px) {
- 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .wrapper {
+    height: 643px;
+    display: flex;
+  }
+  .root {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .leftContainer {
+    height: 35%;
+    width: 100%;
+    margin-top: -13%;
+  }
+  .bgImgContainer {
+    height: 100%;
+    width: 100%;
+    background-image: url("/faq-accordion-card-main/images/bg-pattern-mobile.svg");
+    background-position: center;
+    transform: scale(0.6);
+    margin: 0 auto;
+    margin-top: -5%;
+  }
+  .bgWomanDesktop {
+    height: 100%;
+    width: 100%;
+    background-image: url("/faq-accordion-card-main/images/illustration-woman-online-mobile.svg");
+    background-position: center;
+    margin-top: -15%;
+    margin-left: 5%;
+  }
+  .boxDesktop {
+    display: none;
+  }
+  .rightContainer {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .infoText {
+    display: flex;
+    justify-content: center;
+  }
+  .faqTitle {
+    text-align: center;
+  }
 }
- */
